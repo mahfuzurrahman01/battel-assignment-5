@@ -5,10 +5,22 @@
 }
 
 body {
-    background-color: rgb(21, 20, 20);
+    background-color: rgb(18, 18, 18);
 }
 
-#first-h1 {
+header {
+    position: relative;
+}
+
+.header-title-article {
+    position: absolute;
+    top: 5rem;
+    left: 4rem;
+    right: 8rem;
+
+}
+
+#header-title {
     color: white;
     font-family: 'Cinzel', serif;
     font-weight: bold;
@@ -17,7 +29,7 @@ body {
 }
 
 span {
-    color: rgb(235, 109, 31);
+    color: rgb(239, 100, 14);
 }
 
 p {
@@ -26,5 +38,20 @@ p {
 }
 
 a {
-    color: rgb(235, 109, 31);
+    color: rgb(239, 100, 14);
+}
+
+/* button  style */
+button {
+    background-color:  rgb(239, 100, 14);
+}
+
+/* last total amount color style  */
+.total {
+    color: rgb(239, 100, 14);
+}
+/* player section style  */
+.player{
+    margin-left: 5%;
+    margin-right:5%; 
 }
