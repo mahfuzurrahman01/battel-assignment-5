@@ -32,7 +32,11 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     const coachFieldValue = inputValue('coach-budget');
     // condition for empty field 
     if (isNaN(ManagerFieldValue) || isNaN(coachFieldValue) || ManagerFieldValue < 0 || coachFieldValue < 0) {
-        alert('Input error : input should be in digits and not should be a negetive number!');
+        alert('Input error : input should be in digits,empty field not allowed, and not should be a negetive number!');
+        const managerField = getTheField('manager-budget');
+        managerField.value = '';
+        const coachField = getTheField('coach-budget');
+        coachField.value = '';
         return;
     }
     // get the inner text of player expenses 

@@ -5,11 +5,17 @@
 }
 
 body {
-    background-color: rgb(18, 18, 18);
+    background-color: rgb(14, 14, 14);
 }
 
 header {
-    position: relative;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.555), rgba(15, 15, 15, 0.582)), url(images/banner/bannner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    text-align: center;
 }
 
 .header-title-article {
