@@ -15,7 +15,7 @@ document.getElementById('calculate').addEventListener('click', function () {
     const budgetFieldValue = inputValue('per-player-budget');
     const budgetField = getTheField('per-player-budget').value;
     // condition for empty field 
-    if (isNaN(budgetField) || budgetFieldValue < 0) {
+    if (isNaN(budgetField) || budgetFieldValue < 0 || isNaN(budgetFieldValue)) {
         alert('Please input valid digits only!')
         //reset the field
         const budgetField = getTheField('per-player-budget');
@@ -46,7 +46,7 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     const managerField = getTheField('manager-budget');
     const coachField = getTheField('coach-budget');
     // condition for empty field negetive value or string
-    if (isNaN(managerField.value) || isNaN(coachField.value) || ManagerFieldValue < 0 || coachFieldValue < 0) {
+    if (isNaN(managerField.value) || isNaN(coachField.value) || ManagerFieldValue < 0 || coachFieldValue < 0 || isNaN(ManagerFieldValue) || isNaN(coachFieldValue)) {
         alert('Input error : input should be in digits,empty field not allowed, and not should be a negetive number!');
         managerField.value = '';
         coachField.value = '';
