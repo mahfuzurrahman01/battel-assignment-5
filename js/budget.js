@@ -1,9 +1,21 @@
 // calculate button click event start here
 document.getElementById('calculate').addEventListener('click', function () {
+
+    // const a = document.getElementById('per-player-budget');
+    // const b = a.value;
+    // if(isNaN(b)){
+    //     alert('mahfuz')
+    //     return;
+    // }
+    // else{
+    //     console.log(false)
+    // }
+
     // get the budget field value with common funtion from utilities.js file
     const budgetFieldValue = inputValue('per-player-budget');
+    const budgetField = getTheField('per-player-budget').value;
     // condition for empty field 
-    if (isNaN(budgetFieldValue) || budgetFieldValue < 0) {
+    if (isNaN(budgetField) || budgetFieldValue < 0) {
         alert('Please input valid digits only!')
         //reset the field
         const budgetField = getTheField('per-player-budget');
@@ -30,15 +42,18 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     // get the field value of manager and coach 
     const ManagerFieldValue = inputValue('manager-budget');
     const coachFieldValue = inputValue('coach-budget');
-    // condition for empty field 
-    if (isNaN(ManagerFieldValue) || isNaN(coachFieldValue) || ManagerFieldValue < 0 || coachFieldValue < 0) {
+    //get only the field 
+    const managerField = getTheField('manager-budget');
+    const coachField = getTheField('coach-budget');
+    // condition for empty field negetive value or string
+    if (isNaN(managerField.value) || isNaN(coachField.value) || ManagerFieldValue < 0 || coachFieldValue < 0) {
         alert('Input error : input should be in digits,empty field not allowed, and not should be a negetive number!');
-        const managerField = getTheField('manager-budget');
         managerField.value = '';
-        const coachField = getTheField('coach-budget');
         coachField.value = '';
+        updateInnerText('total-expense', '00');
         return;
     }
+
     // get the inner text of player expenses 
     const playerExpensesInnerText = getInnerText('player-expenses');
     // sum of total cost 
