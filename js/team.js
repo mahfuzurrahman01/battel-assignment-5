@@ -7,7 +7,7 @@ const buttons = document.getElementsByClassName('player');
 // getting the single button we use for of loop 
 for (const button of buttons) {
     button.addEventListener('click', function (event) {
-        if(orderList.childNodes.length > 5 ){
+        if (orderList.childNodes.length > 5) {
             alert("You can't add more than 5 player!")
             return;
         }
